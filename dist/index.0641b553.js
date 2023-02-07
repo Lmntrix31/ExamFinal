@@ -559,17 +559,17 @@ function hmrAccept(bundle, id) {
 },{}],"bNKaB":[function(require,module,exports) {
 var _dataJs = require("./data.js");
 var _userJs = require("./Module/User.js");
-async function getData() {
-    try {
-        const response = await fetch(" https://randomuser.me/api/");
-        const data = await response.json();
-        console.log(data);
-    } catch (error) {
-        console.error("Error fetching data:", error);
-    }
+/* async function getData() {
+  try {
+    const response = await fetch(" https://randomuser.me/api/");
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.error("Error fetching data:", error);
+  }
 }
-getData();
-const userContainer = document.querySelector(".user-container");
+
+getData(); */ const userContainer = document.querySelector(".user-container");
 (0, _dataJs.users).results.forEach((user)=>{
     const userCard = new (0, _userJs.User)(user);
     userContainer.append(userCard.render());

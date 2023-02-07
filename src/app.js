@@ -1,6 +1,6 @@
 import { users } from "./data.js";
 import { User } from "./Module/User.js";
-async function getData() {
+/* async function getData() {
   try {
     const response = await fetch(" https://randomuser.me/api/");
     const data = await response.json();
@@ -10,7 +10,7 @@ async function getData() {
   }
 }
 
-getData();
+getData(); */
 
 const userContainer = document.querySelector(".user-container");
 users.results.forEach((user) => {
