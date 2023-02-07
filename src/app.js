@@ -1,3 +1,4 @@
+import data from "./data.js";
 async function getData() {
   try {
     const response = await fetch(" https://randomuser.me/api/");
@@ -8,3 +9,5 @@ async function getData() {
   }
 }
 getData();
+
+console.log(data);
