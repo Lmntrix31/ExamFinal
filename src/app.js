@@ -1,4 +1,5 @@
-import data from "./data.js";
+import { users } from "./data.js";
+import { User } from "./Module/User.js";
 async function getData() {
   try {
     const response = await fetch(" https://randomuser.me/api/");
@@ -8,6 +9,11 @@ async function getData() {
     console.error("Error fetching data:", error);
   }
 }
+
 getData();
 
-console.log(data);
+const userContainer = document.querySelector(".user-container");
+users.results.forEach((user) => {
+  const userCard = new User(user);
+  userContainer.append(userCard.render());
+});
